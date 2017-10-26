@@ -1,40 +1,27 @@
 {% extends 'intro-to-bibcat/base.html' %}
 
 {% block main %}
-<div class="container jumbotron">
-    <h1>Introduction to BIBCAT</h1>
-    <p class="lead">
-        Learning to use BIBCAT, the bibliographic catalog pull platform for
-        building RDF-based cataloging applications.
-    </p>
-</div>
-<div class="container">
-    <h2>Topics</h2> 
-    <div class="row">
-        <section class="col-4">
-            <ul>
-                <li>Installing</li>
-                <li>Library of Congress <code>marc2bibframe</code> XSLT
-                    transformations</li>
-                <li>RDF Mapping Rules</li>
-                <li>Filtering verbose BIBFRAME to Lean BIBFRAME</li>
-
-            </ul>
-        </section>
-        <section class="col-4">
-            <ul>
-                <li>MODS XML to BIBFRAME</li>
-                <li>Dublin Core XML to BIBFRAME</li>
-               <li>BIBFRAME to DP.LA MAPv4</li>
-               <li>BIBFRAME to Schema.org</li>
-            </ul>
-        </section>
-        <section class="col-4">
-            <ul>
-                <li>Library of Congress Linker</li>
-                <li>Geonames Linker</li>
+<div class="uk-container">
+    <div uk-grid> 
+        <section class="uk-width-2-3">
+            <div class="uk-section uk-section-muted">
+                <div class="uk-container">
+                    <h1 class="uk-heading-primary">Introduction to BIBCAT</h1>
+                    <p class="lead">
+                        How to install and use BIBCAT, the bibliographic catalog pull platform, for
+                        RDF-based cataloging applications.
+                    </p>
+                </div>
+            </div>
+       </section>
+       <section class="uk-width-1-3">
+           <h2>Topics</h2> 
+           <ul>
+               <li><a href="{{ url_for('topic', name='quickstart') }}">Quickstart</a></li>
+               <li><a href="{{ url_for('topic', name='rdf-mapping') }}">RDF Mapping</a></li>
+               <li><a href="{{ url_for('topic', name='external-linking') }}">External Linking</a></li>
            </ul>
-        </section>
+       </section>
     </div>
 </div>
 {% endblock %}

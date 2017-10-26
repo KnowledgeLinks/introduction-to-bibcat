@@ -1,0 +1,111 @@
+<nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+            <li class="{% if not topic %}uk-active{% endif %}"><a href="{{ url_for('home') }}">Introduction to BIBCAT</a></li>
+            <li {% if topic and topic.meta.category == 'bc-qs' %}class="uk-active"{% endif %}>
+                <a href="{{ url_for('topic', name='quickstart') }}">Quickstart</a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li>
+                            <a href="{{ url_for('topic', name='install') }}">
+                                {{ topics.get('install').meta.title }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('topic', name='importing-bibcat') }}">
+                                {{ topics.get('importing-bibcat').meta.title }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('topic', name='marc2bibframe2') }}">
+                                {{ topics.get('marc2bibframe2').meta.title }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li {% if topic and topic.meta.category == 'rdf-map' %}class="uk-active"{% endif %}>
+                <a href="{{ url_for('topic', name='rdf-mapping') }}">
+                        {{ topics.get('rdf-mapping').meta.title }}
+                </a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li>
+                            <a href="{{ url_for('topic', name='filtering-bibframe') }}">
+                                {{ topics.get('filtering-bibframe').meta.title }}
+                            </a>
+                        </li>
+                        <li>
+                           <a href="{{ url_for('topic', name='mods-to-bibframe-map') }}">
+                                {{ topics.get('mods-to-bibframe-map').meta.title }}
+                            </a>
+                        </li>
+                        <li>
+                           <a href="{{ url_for('topic', name='dublin-core-to-bibframe-map') }}">
+                                {{ topics.get('dublin-core-to-bibframe-map').meta.title }}
+                            </a>
+                        </li>
+                        <li></li>
+                        <li>
+                           <a href="{{ url_for('topic', name='bibframe-to-dpla-map4-map') }}">
+                                {{ topics.get('bibframe-to-dpla-map4-map').meta.title }}
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="{{ url_for('topic', name='bibframe-to-schema-org-map') }}">
+                                {{ topics.get('bibframe-to-schema-org-map').meta.title }}
+                            </a>
+                    </ul>
+                </div>
+            </li>
+            <li {% if topic and topic.meta.category == 'bc-link' %}class="uk-active"{% endif %}>
+                <a href="{{ url_for('topic', name='bibcat-linking') }}">
+                    {{ topics.get('bibcat-linking').meta.title }}
+                </a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li>
+                            <a href="{{ url_for('topic', name='loc-authorities-linker') }}">
+                                {{ topics.get('loc-authorities-linker').meta.title }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('topic', name='geonames-linker') }}">
+                                {{ topics.get('geonames-linker').meta.title }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('topic', name='wikidata-linker') }}">
+                                {{ topics.get('wikidata-linker').meta.title }}
+                            </a>
+                        </li>
+                    </ul> 
+                </div>
+            </li>
+            <li {% if topic and topic.meta.category == 'summary' %}class="uk-active"{% endif %}>
+                <a href="{{ url_for('topic', name='summary') }}">
+                    {{ topics.get('summary').meta.title }}
+                </a>
+            </li>
+       </ul>
+
+    </div>
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+            {% if topic and topic.meta.previous %}
+            <li><a href="{{ url_for('topic', name=topic.meta.previous) }}" 
+               uk-icon="icon:  chevron-left"></a>
+            </li>
+            {% endif %}
+            <li><a href="{{ url_for('home') }}"
+               uk-icon="icon: home"></a>
+            </li>
+            {% if topic and topic.meta.next %}
+            <li><a href="{{ url_for('topic', name=topic.meta.next) }}" 
+               uk-icon="icon:  chevron-right"></a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>

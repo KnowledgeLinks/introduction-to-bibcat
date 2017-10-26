@@ -1,0 +1,31 @@
+{% extends 'intro-to-bibcat/base.html' %}
+
+{% block main %}
+<div class="uk-container">
+    <div uk-grid>
+        <article class="uk-article">
+           <h1 class="uk-article-title">{{ topic.meta.title }}</h1>
+           <p class="uk-article-meta">Written by 
+               <a href="http://orcid.org/0000-0002-7543-3893">Jeremy Nelson</a> on
+               {{ topic.meta.date }}
+           </p>
+           {{ topic.html|safe }}
+        </article>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<ul class="uk-iconnav">
+   {% if topic.meta.previous %}
+   <a href="{{ url_for('topic', name=topic.meta.previous) }}" 
+      uk-icon="icon:  chevron-left"></a>
+   {% endif %}
+   <a href="{{ url_for('home') }}"
+      uk-icon="icon: home"></a>
+    {% if topic.meta.next %}
+   <a href="{{ url_for('topic', name=topic.meta.next) }}" 
+      uk-icon="icon:  chevron-right"></a>
+   {% endif %}
+</ul>
+{% endblock %}
