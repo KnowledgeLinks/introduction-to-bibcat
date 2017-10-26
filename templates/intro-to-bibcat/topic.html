@@ -6,7 +6,7 @@
         <article class="uk-article">
            <h1 class="uk-article-title">{{ topic.meta.title }}</h1>
            <p class="uk-article-meta">Written by 
-               <a href="http://orcid.org/0000-0002-7543-3893">Jeremy Nelson</a> on
+               <a href="{{ topic.meta.author }}">{{ topic.meta.author|get_name }}</a> on
                {{ topic.meta.date }}
            </p>
            {{ topic.html|safe }}
