@@ -1,0 +1,115 @@
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix bflc: <http://id.loc.gov/ontologies/bflc/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/8383316#Agent100-11> a bf:Agent,
+        bf:Person ;
+    rdfs:label "Austen, Jane, 1775-1817." ;
+    bflc:name00MarcKey "1001 $aAusten, Jane,$d1775-1817." ;
+    bflc:name00MatchKey "Austen, Jane, 1775-1817." ;
+    bflc:primaryContributorName00MatchKey "Austen, Jane, 1775-1817." .
+
+<http://example.org/8383316#Agent700-17> a bf:Agent,
+        bf:Person ;
+    rdfs:label "Howells, William Dean, 1837-1920." ;
+    bflc:name00MarcKey "7001 $aHowells, William Dean,$d1837-1920." ;
+    bflc:name00MatchKey "Howells, William Dean, 1837-1920." .
+
+<http://example.org/8383316#Instance> a bf:Instance ;
+    rdfs:label "Pride and prejudice /" ;
+    bf:dimensions "18 cm." ;
+    bf:extent [ a bf:Extent ;
+            rdfs:label "xxiii, 401 p." ] ;
+    bf:hasSeries [ a bf:Instance ;
+            rdfs:label "The modern student's library." ;
+            bf:instanceOf <http://example.org/8383316#Work830-18> ;
+            bf:seriesStatement "The modern student's library." ] ;
+    bf:identifiedBy [ a bf:Lccn ;
+            rdf:value "18007296" ] ;
+    bf:instanceOf <http://example.org/8383316#Work> ;
+    bf:issuance <http://id.loc.gov/vocabulary/issuance/mono> ;
+    bf:note [ a bf:Note ;
+            rdfs:label "Series title also at head of t.-p." ] ;
+    bf:provisionActivity [ a bf:ProvisionActivity,
+                bf:Publication ;
+            bf:agent [ a bf:Agent ;
+                    rdfs:label "C. Scribner's sons" ] ;
+            bf:date "c1918" ;
+            bf:place [ a bf:Place ;
+                    rdfs:label "New York, Chicago [etc." ] ],
+        [ a bf:ProvisionActivity,
+                bf:Publication ;
+            bf:date "1918"^^<http://id.loc.gov/datatypes/edtf> ;
+            bf:place <http://id.loc.gov/vocabulary/countries/nyu> ] ;
+    bf:provisionActivityStatement "New York, Chicago [etc.] : C. Scribner's sons, [c1918]" ;
+    bf:responsibilityStatement "by Jane Austen; with an introduction by William Dean Howells" ;
+    bf:title [ a bf:Title ;
+            rdfs:label "Pride and prejudice /" ;
+            bflc:titleSortKey "Pride and prejudice /" ;
+            bf:mainTitle "Pride and prejudice" ] .
+
+<http://example.org/8383316#Work> a bf:Text,
+        bf:Work ;
+    rdfs:label "Pride and prejudice /" ;
+    bf:adminMetadata [ a bf:AdminMetadata ;
+            bflc:encodingLevel [ a bflc:EncodingLevel ;
+                    bf:code "u" ] ;
+            bf:changeDate "1998-10-12T11:22:43"^^xsd:dateTime ;
+            bf:creationDate "1982-04-30"^^xsd:date ;
+            bf:descriptionConventions [ a bf:DescriptionConventions ;
+                    bf:code "aacr" ] ;
+            bf:descriptionModifier [ a bf:Agent ;
+                    rdfs:label "ZMM" ] ;
+            bf:generationProcess [ a bf:GenerationProcess ;
+                    rdfs:label "DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2017-10-29T16:53:00-06:00" ] ;
+            bf:identifiedBy [ a bf:Local ;
+                    rdf:value "8383316" ] ;
+            bf:source [ a bf:Agent,
+                        bf:Source ;
+                    rdfs:label "ZMM" ],
+                [ a bf:Source ;
+                    bf:code "OCoLC" ],
+                [ a bf:Agent,
+                        bf:Source ;
+                    rdfs:label "DLC" ] ;
+            bf:status [ a bf:Status ;
+                    bf:code "n" ] ] ;
+    bf:contribution [ a bf:Contribution ;
+            bf:agent <http://example.org/8383316#Agent700-17> ;
+            bf:role <http://id.loc.gov/vocabulary/relators/ctb> ],
+        [ a bflc:PrimaryContribution,
+                bf:Contribution ;
+            bf:agent <http://example.org/8383316#Agent100-11> ;
+            bf:role <http://id.loc.gov/vocabulary/relators/ctb> ] ;
+    bf:genreForm <http://id.loc.gov/vocabulary/marcgt/fic> ;
+    bf:hasInstance <http://example.org/8383316#Instance> ;
+    bf:language <http://id.loc.gov/vocabulary/languages/eng> ;
+    bf:title [ a bf:Title ;
+            rdfs:label "Pride and prejudice /" ;
+            bflc:titleSortKey "Pride and prejudice /" ;
+            bf:mainTitle "Pride and prejudice" ] .
+
+<http://example.org/8383316#Work830-18> a bf:Work ;
+    rdfs:label "Modern student's library." ;
+    bf:title [ a bf:Title ;
+            rdfs:label "Modern student's library." ;
+            bflc:title30MarcKey "830 0$aModern student's library." ;
+            bflc:title30MatchKey "Modern student's library." ;
+            bflc:titleSortKey "Modern student's library." ;
+            bf:mainTitle "Modern student's library" ] .
+
+<http://id.loc.gov/vocabulary/countries/nyu> a bf:Place .
+
+<http://id.loc.gov/vocabulary/issuance/mono> a bf:Issuance .
+
+<http://id.loc.gov/vocabulary/languages/eng> a bf:Language .
+
+<http://id.loc.gov/vocabulary/marcgt/fic> a bf:GenreForm ;
+    rdfs:label "fiction" .
+
+<http://id.loc.gov/vocabulary/relators/ctb> a bf:Role .
+

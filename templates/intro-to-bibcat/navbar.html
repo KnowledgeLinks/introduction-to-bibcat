@@ -1,8 +1,8 @@
-<nav class="uk-navbar-container" >
+<nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
             <li class="{% if not topic %}uk-active{% endif %}"><a href="{{ url_for('home') }}">Introduction to BIBCAT</a></li>
-            <li {% if topic and topic.meta.category == 'bc-qs' %}class="uk-active"{% endif %}>
+            <li {# if topic and topic.meta.category == 'bc-qs' %}class="uk-active"{% endif #}>
                 <a href="{{ url_for('topic', name='quickstart') }}">Quickstart</a>
                 <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -87,7 +87,7 @@
                 <a href="{{ url_for('topic', name='bibcat-future') }}">
                     {{ topics.get('bibcat-future').meta.title }}
                 </a>
-            </li>
+                </li>
        </ul>
 
     </div>
