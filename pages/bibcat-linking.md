@@ -7,3 +7,5 @@ next: loc-authorities-linker
 
 The promise of [Library Linked Data][LLD]
 
+[LLD]: https://www.ld4l.org/
+
