@@ -8,6 +8,8 @@ from flask_flatpages import FlatPages
 
 app = Flask(__name__)
 app.config["FLATPAGES_EXTENSION"] = ".md"
+app.config["TEMPLATES_AUTO_RELOAD"] = True
+
 pages = FlatPages(app)
 
 SCHEMA = rdflib.Namespace("http://schema.org/")

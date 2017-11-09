@@ -16,16 +16,18 @@
 {% endblock %}
 
 {% block footer %}
-<ul class="uk-iconnav">
-   {% if topic.meta.previous %}
-   <a href="{{ url_for('topic', name=topic.meta.previous) }}" 
-      uk-icon="icon:  chevron-left"></a>
-   {% endif %}
-   <a href="{{ url_for('home') }}"
-      uk-icon="icon: home"></a>
-    {% if topic.meta.next %}
-   <a href="{{ url_for('topic', name=topic.meta.next) }}" 
-      uk-icon="icon:  chevron-right"></a>
-   {% endif %}
-</ul>
+<div class="uk-container uk-margin-large-top">
+   <ul class="uk-iconnav">
+      {% if topic.meta.previous %}
+      <a href="{{ url_for('topic', name=topic.meta.previous) }}" 
+         uk-icon="icon:  chevron-left"></a>
+      {% endif %}
+      <a href="{{ url_for('home') }}"
+         uk-icon="icon: home"></a>
+       {% if topic.meta.next %}
+      <a href="{{ url_for('topic', name=topic.meta.next) }}" 
+         uk-icon="icon:  chevron-right"></a>
+      {% endif %}
+   </ul>
+</div>
 {% endblock %}

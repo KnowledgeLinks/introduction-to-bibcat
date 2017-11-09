@@ -43,7 +43,7 @@ how many MARC records are in the list.
 
 <pre><code>>>>> marc_records = []
 >>> for row in marc_reader:
-	marc_records.append(row)
+        marc_records.append(row)
 	
 >>> len(marc_records)
 30</code></pre> 
@@ -220,7 +220,7 @@ then print the output as RDF Turtle format:
 
 &lt;http://id.loc.gov/vocabulary/relators/ctb&gt; a bf:Role .</code></pre>
 
-## Next: Uing RDF Mapping Language
+## Next: Using RDF Mapping Language
 
 In the next series of topics, we will introduce the [RDF Mapping Language](/topic/rdf-mapping) and
 show how using `bibcat.rml`, we can convert a [simplified BIBFRAME 2.0](/topic/filtering-bibframe) 
