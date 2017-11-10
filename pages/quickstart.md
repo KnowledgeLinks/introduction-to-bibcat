@@ -1,7 +1,13 @@
 author: http://orcid.org/0000-0002-7543-3893
 category: bc-qs
-date: 2017-10-30
+date: 2017-11-09
 next: install
 title: Quickstart
 
-To install BIBCAT
+In this section, you'll [install BIBCAT](/topic/install),
+get a brief overview of the basic [bibcat](/topic/importing-bibcat)
+functions. Next we will use the `pymarc` Python module to
+parse some MARC21 records that we will then use the Library
+of Congress [marc2bibframe2](/topic/marc2bibframe2) XSLT project 
+to create a BIBFRAME 2.0 RDF Graph that we will then use in the 
+subsequent sections.

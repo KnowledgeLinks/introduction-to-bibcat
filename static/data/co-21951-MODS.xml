@@ -1,0 +1,54 @@
+
+<mods:modsCollection xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:mods>
+    <mods:titleInfo>
+      <mods:title>Rail communication handbook</mods:title>
+    </mods:titleInfo>
+    <mods:name type="corporate">
+      <mods:namePart>Colorado. Division of Transit and Rail. </mods:namePart>
+      <mods:role>
+        <mods:roleTerm authority="marcrelator" type="text">contributor</mods:roleTerm>
+      </mods:role>
+    </mods:name>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:originInfo>
+      <mods:place>
+        <mods:placeTerm type="text">Denver, Colo.</mods:placeTerm>
+      </mods:place>
+      <mods:publisher>Colorado Department of Transportation, Division of Transit and Rail</mods:publisher>
+      <mods:dateIssued keyDate="yes">2012</mods:dateIssued>
+    </mods:originInfo>
+    <mods:language>
+      <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+    </mods:language>
+    <mods:physicalDescription>
+      <mods:extent>1 online resource (21 pages) : illustrations</mods:extent>
+    </mods:physicalDescription>
+    <mods:abstract>The Rail Communication Handbook is intended to be a helpful resource for CDOT personnel, our rail partners from private industry, concerned parties, and public entities when addressing activities near freight rail operations. This handbook identifies rail related resources within CDOT and rail partners, outlining the roles, responsibilities, and expectations of each party; creates channels to disseminate rail information quickly and efficiently; ensures consistency of information throughout the organization; and encourages early dialog, partnerships, and cooperation for all freight rail activities.</mods:abstract>
+    <mods:subject authority="lcsh">
+      <mods:topic>Railroads</mods:topic>
+      <mods:geographic>Colorado</mods:geographic>
+      <mods:genre>Handbooks, manuals, etc</mods:genre>
+    </mods:subject>
+    <mods:subject authority="lcsh">
+      <mods:topic>Abandonment</mods:topic>
+      <mods:topic>Abandonment</mods:topic>
+    </mods:subject>
+    <mods:subject authority="lcsh">
+      <mods:topic>Railroad crossings</mods:topic>
+    </mods:subject>
+    <mods:note></mods:note>
+    <mods:note>&quot;August 2012.&quot;</mods:note>
+    <mods:note>Online resource; title from PDF cover (viewed June 2016)</mods:note>
+    <mods:classification authority="codocs">TRA2/7.8/R13/2012/INTERNET</mods:classification>
+    <mods:recordInfo>
+      <mods:recordIdentifier source="OCoLC">951067240</mods:recordIdentifier>
+      <mods:languageOfCataloging>
+        <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+      </mods:languageOfCataloging>
+    </mods:recordInfo>
+    <mods:location>
+      <mods:url>http://hdl.handle.net/11629/co:21951</mods:url>
+    </mods:location>
+  </mods:mods>
+</mods:modsCollection>
