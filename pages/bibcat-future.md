@@ -17,11 +17,14 @@ is now used in a number of applications including:
 BIBCAT Publisher is an open-source linked-data publishing platform 
 for an institution’s knowledge graphs and digital objects. Using 
 RML mappings, different data sources can feed into a normalized
-RDF triples based on BIBFRAME, Schema.org, and bibliotek-o vocabularies.
+RDF triples based on [BIBFRAME](http://www.loc.gov/bibframe/), 
+[Schema.org](http://schema.org/), and [bibliotek-o](https://bibliotek-o.org/1.1/ontology.html) 
+vocabularies.
+
 Unique digital objects can be ingested into a Fedora repository with access
 and discovery provided through a search index while also supporting 
 a full SPARQL endpoint using Blazegraph. A full CRUD UI for the Knowledge
-Graphs 
+Graphs. 
 
 <hr>
 **Disclosure** - I'm a co-founder of KnowledgeLinks
