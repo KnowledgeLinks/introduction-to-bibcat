@@ -9,6 +9,8 @@ from flask_flatpages import FlatPages
 app = Flask(__name__)
 app.config["FLATPAGES_EXTENSION"] = ".md"
 app.config["TEMPLATES_AUTO_RELOAD"] = True
+app.config["FREEZER_RELATIVE_URLS"] = True
+app.config['FREEZER_BASE_URL'] = 'http://knowledgelinks.io/'
 
 pages = FlatPages(app)
 
@@ -31,7 +33,7 @@ def entity_name(url):
     
 
 @app.route("/topic/")
-@app.route("/topic/<name>")
+@app.route("/topic/<name>.html")
 def topic(name=None):
     if name is None:
         return render_template(
