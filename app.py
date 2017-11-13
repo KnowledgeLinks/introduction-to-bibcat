@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.config["FLATPAGES_EXTENSION"] = ".md"
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config["FREEZER_RELATIVE_URLS"] = True
-app.config['FREEZER_BASE_URL'] = 'http://bibcat.org/'
+app.config['FREEZER_BASE_URL'] = 'http://bibcat.org/introduction/'
 
 pages = FlatPages(app)
 
