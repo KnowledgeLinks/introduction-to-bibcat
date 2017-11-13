@@ -27,7 +27,7 @@ unzip the file, and then for convenience later on, rename the directory to `marc
 
 ## Opening MARC 21 file with pymarc
 If you have a MARC21 file already, use that file. Otherwise, you can 
-download a sample [MARC21 file](/static/data/pride-and-prejudice.mrc) made up of a collection of Jane Austen
+download a sample [MARC21 file](../static/data/pride-and-prejudice.mrc) made up of a collection of Jane Austen
 MARC21 records from Colorado College.
 
 **First**, go back to your Python IDLE program and import [`pymarc`][PYMRC]
