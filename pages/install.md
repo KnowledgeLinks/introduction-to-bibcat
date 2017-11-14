@@ -4,9 +4,15 @@ date: 2017-10-30
 next: importing-bibcat
 previous: quickstart
 title: Installing BIBCAT
+contents: dependencies:Dependencies, py-venv:Python Virtual Environment, using-pip:Using PIP, from-source:From source code
+
+<a name="dependencies"></a>
 
 ## Dependencies
 *  [Python 3.6][PY36]
+
+
+<a name="py-venv"></a>
 
 ## Create a Python Virtual Environment
 The recommended way to use BIBCAT is to first create a Python 
@@ -26,6 +32,7 @@ to install [BIBCAT][BC] and all of it's module dependencies.
     (bibcat-env) $
     </code></pre>
 
+<a name="using-pip"></a>
 
 ## Using PIP
 With the `bibcat-env` active, you'll can install [BIBCAT][BC] from
@@ -34,6 +41,8 @@ With the `bibcat-env` active, you'll can install [BIBCAT][BC] from
 <pre><code>
 (bibcat-env) $ pip install bibcat
 </code></pre>
+
+<a name="from-source"></a>
 
 ## From Source code
 

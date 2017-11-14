@@ -8,9 +8,6 @@ from flask_flatpages import FlatPages
 
 app = Flask(__name__)
 app.config["FLATPAGES_EXTENSION"] = ".md"
-app.config["TEMPLATES_AUTO_RELOAD"] = True
-app.config["FREEZER_RELATIVE_URLS"] = True
-app.config['FREEZER_BASE_URL'] = 'http://bibcat.org/'
 
 pages = FlatPages(app)
 
@@ -31,6 +28,12 @@ def entity_name(url):
         return ''
     return str(name_obj)
     
+@app.template_filter('build_nav')
+def build_contents(contents_str):
+    internal_link, label = contents_str.split(":")
+    return """<a href="#{0}">{1}</a>""".format(
+        internal_link.strip(),
+        label.strip())
 
 @app.route("/topic/")
 @app.route("/topic/<name>.html")

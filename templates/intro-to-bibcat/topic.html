@@ -2,16 +2,34 @@
 
 {% block main %}
 <div class="uk-container">
-    <div uk-grid>
-        <article class="uk-article">
-           <h1 class="uk-article-title">{{ topic.meta.title }}</h1>
-           <p class="uk-article-meta">Written by 
-               <a href="{{ topic.meta.author }}">{{ topic.meta.author|get_name }}</a> on
-               {{ topic.meta.date }}
-           </p>
+    <div uk-grid class="uk-margin-small-top">
+        {% if topic.meta.contents %}
+        <div class="uk-width-1-4">  
+            <div class="uk-card uk-card-secondary"> 
+                <div class="uk-card-header">
+                    <h3 class="uk-card-title">Contents</h3>
+                </div>
+                <ul>
+                {% for row in topic.meta.contents.split(",") %}
+                <li>{{ row|build_nav|safe }}</li>
+                {% endfor %}
+                </ul>
+           </div>
+        </div>
+        {% endif %}
+        <div class="{% if topic.meta.contents %}uk-width-3-4{% endif %}">
+            <div class="uk-article"> 
+                <h1 class="uk-article-title">{{ topic.meta.title }}</h1>
+                <p class="uk-article-meta">Written by 
+                    <a href="{{ topic.meta.author }}">{{ topic.meta.author|get_name }}</a> on
+                    {{ topic.meta.date }}
+                </p>
+            </div>
+        </div>
+     </div> 
+     <article class="uk-article">
            {{ topic.html|safe }}
-        </article>
-    </div>
+     </article> 
 </div>
 {% endblock %}
 

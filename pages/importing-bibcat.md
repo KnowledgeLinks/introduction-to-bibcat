@@ -4,6 +4,10 @@ date: 2017-10-30
 next: marc2bibframe2
 previous: install
 title: Importing BIBCAT and Overview of Functions
+contents: import-bibcat:Importing BIBCAT, setup-exercises:Setup for Exercises, overview-funcs:Overview of BIBCAT Functions
+
+
+<a name="import-bibcat"></a>
 
 ## Importing BIBCAT
 To import [BIBCAT][BC], first activate your Virtual Environment and then launch 
@@ -17,6 +21,8 @@ INFO:rdflib:RDFLib Version: 4.2.2
 >>> bibcat.__version__
 '1.18.1'
 </code></pre>
+
+<a name="setup-exercises"></a>
 
 ## Setup for Exercises
 Before we explore `bibcat`, we'll create a minimal RDF environment to use 
@@ -36,6 +42,9 @@ through-out this tutorial.
 
 1.  BIND BIBFRAME namespace in graph
     <pre><code>>>> test_graph.namespace_manager.bind("bf", BF)</code></pre>
+
+
+<a name="overview-funcs"></a>
 
 ## Overview of BIBCAT Functions
 The base `bibcat` module has a number of helpful RDF functions when building Semantic
