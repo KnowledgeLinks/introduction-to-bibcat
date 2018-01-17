@@ -1,11 +1,12 @@
 author: http://orcid.org/0000-0002-7543-3893
 category: bc-qs
-date: 2017-11-30
+date: 2018-01-17
 next: rdf-mapping
 previous: importing-bibcat
 title: Using marc2bibframe2 XSLT
 
-Last year the [Library of Congress](http://loc.gov) released an official 
+## Introduction
+In 2016 the [Library of Congress](http://loc.gov) released an official 
 MARCXML-to-BIBFRAME 2.0 RDF XML project on Github at [https://github.com/](https://github.com/)
 We'll now go through the steps of converting MARC 21 to MARC XML, and then create an 
 XSLT transform script to convert the MARC record to BIBFRAME 2.0 RDF XML.
@@ -15,7 +16,15 @@ Open up a new command-line to set-up `marc2bibframe2` environment.
 If you have [git](https://git-scm.com/) installed, you can clone the Library of 
 Congress [marc2bibframe2][MRC2BF] project directly from Github.
 
-<pre><code>(bibcat-env) $ git clone https://github.com/lcnetdev/marc2bibframe2.git</code></pre>
+<pre><code>(bibcat-env) $ git clone https://github.com/lcnetdev/marc2bibframe2.git
+(bibcat-env) $ cd marc2bibframe2
+(bibcat-env) $ more IDMETA
+NAME=marc2bibframe2
+CENTOS_DIST="centos6 centos7"
+VERSION=1.3.1
+
+(bibcat-env) /path/to/marc2bibframe2 $ 
+</code></pre>
 
 If you don't have [git](https://git-scm.com/) on your system, you can still download a zip file of the 
 latest release from [https://github.com/lcnetdev/marc2bibframe2/releases/latest][MRC2BF_LATEST],
@@ -25,7 +34,7 @@ unzip the file, and then for convenience later on, rename the directory to `marc
 (bibcat-env)$ unzip v1.3.1.zip
 (bibcat-env)$ mv marc2bibframe2-1.3.1/ marc2bibframe2</code></pre>
 
-## Opening MARC 21 file with pymarc
+## Opening a MARC 21 file with pymarc
 If you have a MARC21 file already, use that file. Otherwise, you can 
 download a sample [MARC21 file](../static/data/pride-and-prejudice.mrc) made up of a collection of Jane Austen
 MARC21 records from Colorado College.

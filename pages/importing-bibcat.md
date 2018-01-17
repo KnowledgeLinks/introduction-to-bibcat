@@ -1,6 +1,6 @@
 author: http://orcid.org/0000-0002-7543-3893
 category: bc-qs
-date: 2017-10-30
+date: 2018-01-17
 next: marc2bibframe2
 previous: install
 title: Importing BIBCAT and Overview of Functions
@@ -19,7 +19,7 @@ Type "copyright", "credits" or "license()" for more information.
 >>> import bibcat
 INFO:rdflib:RDFLib Version: 4.2.2
 >>> bibcat.__version__
-'1.18.1'
+'2.0.4'
 </code></pre>
 
 <a name="setup-exercises"></a>
