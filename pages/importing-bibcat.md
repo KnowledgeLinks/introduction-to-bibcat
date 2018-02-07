@@ -96,7 +96,7 @@ spaces with dashes, and removes any punctuation.
 </code></pre>
  
 The `bibcat.wikify` is similar function but converts a string that follows 
-[Wikipedia][https://en.wikipedia.org/wiki/Main_Page] patter of keeping capitalization
+[Wikipedia](https://en.wikipedia.org/wiki/Main_Page) patter of keeping capitalization
 and replacing punctuation and spaces with underscores.
 
 <pre><code>
